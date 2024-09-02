@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_office_employee,access_office_employee,model_office_employee,,1,1,1,1
+access_office_pay,access_office_pay,model_office_pay,,1,1,1,1
+access_office_department,access_office_department,model_office_department,,1,1,1,1
+access_office_finance,access_office_finance,model_office_finance,,1,1,1,1
+access_office_inventory,access_office_inventory,model_office_inventory,,1,1,1,1
+access_office_record,access_office_record,model_office_record,,1,1,1,1
+access_office_task,access_office_task,model_office_task,,1,1,1,1
+access_office_team,access_office_team,model_office_team,,1,1,1,1

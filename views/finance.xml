@@ -1,0 +1,39 @@
+<odoo>
+    <record id="form_view_finance" model="ir.ui.view">
+        <field name='name' >office_finance.form</field>
+        <field name="model">office_finance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="team_id"/>
+                        <field name="project"/>
+                        <field name="budget"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="tree_view_finance" model="ir.ui.view">
+        <field name='name' >office_finance.tree</field>
+        <field name="model">office_finance</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="team_id"/>
+                <field name="project"/>
+                <field name="budget"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_view_finance" model="ir.actions.act_window">
+        <field name="name">Finance</field>
+        <field name="res_model">office_finance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_view_finance" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first employee
+            </p>
+        </field>
+    </record>
+</odoo>

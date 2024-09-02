@@ -1,0 +1,12 @@
+<odoo>
+<menuitem id="office_menu_item" name="Office Management" ></menuitem>
+<menuitem id="employee_menu_item" name="Employees" parent="office_menu_item" action="action_view_employee"></menuitem>
+<menuitem id="pay_app_menu_item" name="Appraisal and Payout" parent="office_menu_item" action="action_view_pay_app"></menuitem>
+<menuitem id="department_menu_item" name="Department" parent="office_menu_item" action="action_view_department"></menuitem>
+<menuitem id="finance_menu_item" name="Finance" parent="office_menu_item" action="action_view_finance"></menuitem>
+<menuitem id="inventory_menu_item" name="Inventory" parent="office_menu_item" action="action_view_inventory"></menuitem>
+<menuitem id="record_menu_item" name="Record" parent="office_menu_item" action="action_view_record"></menuitem>
+<menuitem id="task_menu_item" name="Task" parent="office_menu_item" action="action_view_task"></menuitem>
+<menuitem id="team_menu_item" name="Team" parent="office_menu_item" action="action_view_team"></menuitem>
+
+</odoo>

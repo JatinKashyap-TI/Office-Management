@@ -1,0 +1,22 @@
+{
+    "name":"Office Management",
+    "description":"Office_management",
+    "installable":True,
+    "application":True,
+    'version':"1.0",
+    "category":"management",
+    "author":"Jatin",
+    "summary":"There is nothing like summary for Legends",
+    "data":['security/ir.model.access.csv',
+            'security/groups.xml',
+            "views/employee.xml",
+            "views/app_pay.xml",
+            "views/department.xml",
+            "views/finance.xml",
+            "views/inventory.xml",
+            "views/record.xml",
+            "views/task.xml",
+            "views/team.xml",
+            "views/menus.xml",
+            ]
+}

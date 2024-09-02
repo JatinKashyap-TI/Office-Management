@@ -1,0 +1,64 @@
+<odoo>
+    <record id="form_view_app_pay" model="ir.ui.view">
+        <field name='name' >office_pay.form</field>
+        <field name="model">office_pay</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="emp_id"/>
+                        <field name="pay"/>
+                        <field name="app"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="tree_view_app_pay" model="ir.ui.view">
+        <field name='name' >office_pay.tree</field>
+        <field name="model">office_pay</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="emp_id"/>
+                <field name="pay"/>
+                <field name="app"/>
+            </tree>
+        </field>
+    </record>
+    
+
+  <record id="view_office_pay_kanban" model="ir.ui.view">
+        <field name="name">office.pay.kanban</field>
+        <field name="model">office_pay</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="emp_id"/>
+                <field name="pay"/>
+                <field name="app"/>
+                <templates>
+                    <t t-name="kanban-box">
+                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" >
+                                <strong>  Emp Id  : <field name="emp_id"/></strong>
+                                <hr/>
+                                <strong> Sallary : <field name="pay"/></strong>
+                                <hr/>
+                                <strong> Expected Appraisal : <field name="app"/></strong>
+                            </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="action_view_pay_app" model="ir.actions.act_window">
+        <field name="name">Payout and Appraisal</field>
+        <field name="res_model">office_pay</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_id" ref="tree_view_app_pay" />
+
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first employee
+            </p>
+        </field>
+    </record>
+</odoo>

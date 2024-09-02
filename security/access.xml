@@ -1,0 +1,312 @@
+<odoo>
+
+        <record id="access_office_employee_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_employee"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_pay_hr" model="ir.model.access">
+            <field name="name">Access Office Pay HR</field>
+            <field name="model_id" ref="model_office_pay"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_department_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_department"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_finance_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_finance"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_inventory_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_inventory"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_record_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_record"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_task_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_task"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_team_hr" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_team"/>
+            <field name="group_id" ref="hr"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+
+
+
+        <record id="access_office_employee_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_employee"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_pay_system" model="ir.model.access">
+            <field name="name">Access Office Pay HR</field>
+            <field name="model_id" ref="model_office_pay"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_department_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_department"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_finance_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_finance"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_inventory_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_inventory"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_record_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_record"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_task_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_task"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_team_system" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_team"/>
+            <field name="group_id" ref="system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+
+
+
+
+
+
+        <record id="access_office_employee_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_employee"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_pay_employee" model="ir.model.access">
+            <field name="name">Access Office Pay HR</field>
+            <field name="model_id" ref="model_office_pay"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_department_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_department"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_finance_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_finance"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_inventory_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_inventory"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_record_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_record"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_task_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_task"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_team_employee" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_team"/>
+            <field name="group_id" ref="employee"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        
+
+
+
+
+        <record id="access_office_employee_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_employee"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_pay_finance" model="ir.model.access">
+            <field name="name">Access Office Pay HR</field>
+            <field name="model_id" ref="model_office_pay"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_department_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_department"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_finance_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_finance"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_inventory_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_inventory"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_record_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_record"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_task_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_task"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+        <record id="access_office_team_finance" model="ir.model.access">
+            <field name="name">Access Office Employee HR</field>
+            <field name="model_id" ref="model_office_team"/>
+            <field name="group_id" ref="finance"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+
+
+
+</odoo>
