@@ -6,3 +6,4 @@ from . import inventory
 from . import app_pay
 from . import record
 from . import task
+from . import Attendence

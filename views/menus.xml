@@ -8,5 +8,6 @@
 <menuitem id="record_menu_item" name="Record" parent="office_menu_item" action="action_view_record"></menuitem>
 <menuitem id="task_menu_item" name="Task" parent="office_menu_item" action="action_view_task"></menuitem>
 <menuitem id="team_menu_item" name="Team" parent="office_menu_item" action="action_view_team"></menuitem>
+<menuitem id="attendence_menu_item" name="Attendence" parent="office_menu_item" action="action_view_attendence"></menuitem>
 
 </odoo>
