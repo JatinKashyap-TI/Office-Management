@@ -3,20 +3,43 @@
         <field name='name' >office_record.form</field>
         <field name="model">office_record</field>
         <field name="arch" type="xml">
-            <form>
+            <form >
                 <sheet>
                     <group>
-                        <field name="emp_id"/>
-                        <field name="emp_cno"/>
-                        <field name="emp_mail"/>
-                        <field name="emp_add"/>
-                        <field name="emp_aad_id"/>
-                        <field name="emp_bank"/>
-                        <field name="emp_photo"/>
-                        <field name="emp_doc1"/>
-                        <field name="emp_dob"/>
-                        <field name="age"/>
+                    <group>
+                        <field name="emp_id" class="form-control" placeholder="name@example.com"/>
+                  
+                        <field name="emp_cno" class="form-control" placeholder="name@example.com"/>
+                 
                     </group>
+                    <group>
+
+                        <field name="emp_mail" class="form-control" placeholder="name@example.com"/>
+                        <field name="emp_add" class="form-control" placeholder="name@example.com"/>
+                    </group>
+                    <group>
+
+                        <field name="emp_aad_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="emp_bank" class="form-control" placeholder="name@example.com"/>
+                    </group>
+                    <group>
+                        <group>
+                        <field name="emp_photo" class="form-control" type="file" id="formFile" widget="image" />
+                        </group>
+                        
+
+                    </group>
+                    <group>
+
+                        <field name="emp_dob" class="form-control" placeholder="name@example.com"/>
+                        <field name="age" class="form-control" placeholder="name@example.com"/>
+                    </group>
+                    </group>
+                    <notebook>
+                        <page string="Document">
+                        <field name="emp_doc1" class="form-control" type="file" id="formFile" widget="attachment"/>
+                        </page>
+                        </notebook>
                 </sheet>
             </form>
         </field>
@@ -26,7 +49,7 @@
         <field name="model">office_record</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="emp_id"/>
+                <field name="emp_id"  />
                 <field name="emp_cno"/>
                 <field name="emp_mail"/>
                 <field name="emp_add"/>
@@ -39,6 +62,25 @@
         </tree>
         </field>
     </record>
+
+<record id="view_office_record_search" model="ir.ui.view">
+        <field name="name">office.record.search</field>
+        <field name="model">office_record</field>
+        <field name="arch" type="xml">
+            <search string="Search Records">
+                <field name="emp_id" string="Employee Id"/>
+                <field name="emp_mail" string="Employee Email"/>
+                <field name="emp_add" string="Employee Address"/>
+                <field name="emp_aad_id" string="Aadhar Number"/>
+                <field name="emp_bank" string="Bank Account Number"/>
+                <field name="emp_dob" string="Date of Birth"/>
+                <field name="age" string="Age"/>
+                <field name="doc_available" string="Document Available"/>
+                
+            </search>
+        </field>
+    </record>
+
     <record id="view_record_kanban" model="ir.ui.view">
         <field name="name">office.record.kanban</field>
         <field name="model">office_record</field>
@@ -56,51 +98,46 @@
                 <field name="age"/>
                 <templates>
                     <t t-name="kanban-box">
-                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
-                                <img t-att-src="kanban_image('office_record', 'emp_photo', record.id.raw_value)" style="width:280px ;padding-left:15%" />
-
+                            <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" style="max-width: 540px;max-height: 260px;" >
+                              <div class="row g-0">
+                                    <div class="col-md-4">
+                                <img t-att-src="kanban_image('office_record', 'emp_photo', record.id.raw_value)" class="img-fluid rounded-start" />
+</div>
                             
-                                <br/>
-                                <hr/>
+                                <!-- <hr/> -->
+<div class="col-md-8">
+      <div class="card-body">
+                                <h5 class="card-title" > Emp Contact Number : <field name="emp_cno"/></h5>
+                                <!-- <hr/> -->
 
-                                <strong> Emp Contact Number : <field name="emp_cno"/></strong>
-                                <br/>
-                                <hr/>
+                                <div class="card-text" > Emp mail : <field name="emp_mail"/></div>
+                                <!-- <hr/> -->
 
-                                <strong> Emp mail : <field name="emp_mail"/></strong>
-                                <br/>
-                                <hr/>
+                                <div> Emp Add : <field name="emp_add" /></div>
+                                <!-- <hr/> -->
 
-                                <strong> Emp Add : <field name="emp_add"/></strong>
-                                <br/>
-                                <hr/>
+                                <div> Emp Govt Id : <field name="emp_aad_id"/></div>
+                                <!-- <hr/> -->
 
-                                <strong> Emp Govt Id : <field name="emp_aad_id"/></strong>
-                                <br/>
-                                <hr/>
-
-                                <strong> Bank Account: <field name="emp_bank"/></strong>
-                                <br/>
+                                <div> Bank Account: <field name="emp_bank"/></div>
                                 
-                                <hr/>
-                                <strong> Employee Id : <field name="emp_id"/></strong>
+                                <!-- <hr/> -->
+                                <div> Employee Id : <field name="emp_id"/></div>
 
-                                <br/>
-                                <hr/>
+                                <!-- <hr/> -->
 
-                                <strong> Verified <field name="doc_available" widget='boolean' style="width:5px" />
-</strong>
-                                <br/>
-                                <hr/>
+                                <div> Verified <field name="doc_available" widget='boolean' style="width:5px" /></div>
+                                <!-- <hr/> -->
 
-                                <strong> Dob: <field name="emp_dob"/></strong>
-                                <br/>
-                                <hr/>
+                                <div> Dob: <field name="emp_dob"/></div>
+                                <!-- <hr/> -->
 
-                                <strong> Age : <field name="age"/></strong>
-                                <br/>
+                                <div> Age : <field name="age"/></div>
                                 
 
+                            </div>
+                            </div>
+                            </div>
                             </div>
                             
 

@@ -6,22 +6,38 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="team_id"/>
-                        <field name="project"/>
-                        <field name="budget"/>
+                        <field name="team_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="team_name" class="form-control" placeholder="name@example.com"/>
+                        <field name="project" class="form-control" placeholder="name@example.com"/>
+                        <field name="budget" class="form-control" placeholder="name@example.com"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+
+<record id="view_office_finance_search" model="ir.ui.view">
+        <field name="name">office.finance.search</field>
+        <field name="model">office_finance</field>
+        <field name="arch" type="xml">
+            <search string="Search Finance Records">
+                <field name="team_id" string="Team Id"/>
+                <field name="project" string="Proteam_nameject"/>
+                <field name="budget" string="Budget"/>
+                
+            </search>
+        </field>
+    </record>
+
     <record id="tree_view_finance" model="ir.ui.view">
         <field name='name' >office_finance.tree</field>
         <field name="model">office_finance</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="team_id"/>
-                <field name="project"/>
-                <field name="budget"/>
+                <field name="team_id" class="text-center badge text-bg-primary fs-6 fw-bold " />
+                <field name="project" class="text-center fw-bold" />
+                <field name="budget" class=" text-center badge text-bg-primary fs-6 fw-bold " />
+                <field name="team_name" class="text-center fw-bold" />
             </tree>
         </field>
     </record>

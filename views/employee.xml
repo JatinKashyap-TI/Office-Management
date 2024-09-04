@@ -3,13 +3,22 @@
         <field name='name' >office_employee.form</field>
         <field name="model">office_employee</field>
         <field name="arch" type="xml">
-            <form>
+            <form class="p-3 mb-2 bg-body text-body">
                 <sheet>
+
+                    <group >
                     <group>
-                        <field name="emp_name"/>
-                        <field name="emp_id"/>
-                        <field name="dept_id"/>
-                        <field name="team_id"/>
+                        <field name="emp_name" class="form-control" placeholder="name@example.com"/>
+
+                        <field name="emp_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="dept_name" class="form-control" placeholder="name@example.com"/>
+                    </group>
+                    <group>
+
+                        <field name="dept_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="team_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="team_name" class="form-control" placeholder="name@example.com"/>
+                    </group>
                     </group>
                 </sheet>
             </form>
@@ -19,12 +28,14 @@
     <record id="tree_view_employee" model="ir.ui.view">
         <field name='name' >office_employee.tree</field>
         <field name="model">office_employee</field>
-        <field name="arch" type="xml">
+        <field name="arch" type="xml" >
             <tree>
-                <field name="emp_name"/>
-                <field name="emp_id"/>
-                <field name="dept_id"/>
-                <field name="team_id"/>
+                <field name="emp_name" class=" badge text-bg-primary fs-6 fw-bold " />
+                <field name="emp_id" class="text-center fw-bold"/>
+                <field name="dept_id" class="badge text-bg-primary fs-6 fw-bold " />
+                <field name="dept_name" class="text-center fw-bold "  />
+                <field name="team_id" class="badge text-bg-primary fs-6 fw-bold " />
+                <field name="team_name" class="text-center fw-bold "  />
             </tree>
         </field>
     </record>
@@ -37,24 +48,28 @@
                 <field name="emp_name"/>
                 <field name="emp_id"/>
                 <field name="dept_id"/>
+                <field name="dept_name"/>
                 <field name="team_id"/>
+                <field name="team_name"/>
                 
                 <templates>
                     <t t-name="kanban-box">
-                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
-                                <strong> Name : <field name="emp_name"/></strong>
-                                <br/>
+                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record card text-bg-secondary mb-3" t-att-record="record">
+                                <strong> Name : <field name="emp_name"  /></strong>
                                 <hr/>
                                 <strong> Department : <field name="dept_id"/></strong>
-                                <br/>
                                 <hr/>
 
                                 <strong> Team Id : <field name="team_id"/></strong>
-                                <br/>
                                 <hr/>
 
                                 <strong> Emp Id : <field name="emp_id"/></strong>
-                                <br/>
+                                <hr/>
+
+                                <strong> Dept Name : <field name="dept_name"/></strong>
+                                <hr/>
+
+                                <strong> Team Name : <field name="team_name"/></strong>
 
                             </div>
                             

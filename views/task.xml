@@ -6,11 +6,16 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="team_id"/>
-                        <field name="project"/>
-                        <field name="start_dt"/>
-                        <field name="time"/>
-                        <field name="status"/>
+                    <group>
+                        <field name="team_id" class="form-control" placeholder="name@example.com"/>
+                        <field name="project" class="form-control" placeholder="name@example.com"/>
+                        <field name="emp_id" class="form-control" placeholder="name@example.com"/>
+                    </group>
+                    <group>
+                        <field name="start_dt" class="form-control" placeholder="name@example.com"/>
+                        <field name="time" class="form-control" placeholder="name@example.com"/>
+                        <field name="status" class="form-control" placeholder="name@example.com"/>
+                    </group>
                     </group>
                 </sheet>
             </form>
@@ -21,16 +26,33 @@
         <field name="model">office_task</field>
         <field name="arch" type="xml">
             <tree>
-                        <field name="team_id"/>
-                        <field name="project"/>
-                        <field name="start_dt"/>
-                        <field name="time"/>
-                        <field name="status"/>
+                        <field name="team_id" class=" badge text-bg-primary fs-6 fw-bold "/>
+                        <field name="project" class="text-center fw-bold" />
+                        <field name="start_dt" class=" badge text-bg-primary fs-6 fw-bold "/>
+                        <field name="time" class="text-center fw-bold" />
+                        <field name="status" widget="statusbar"  class=" text-center badge text-bg-primary fs-6 fw-bold "/>
+                        <field name="emp_id" class="text-center fw-bold" widget="badge" />
 
 
             </tree>
         </field>
     </record>
+
+<record id="view_office_task_search" model="ir.ui.view">
+        <field name="name">office.task.search</field>
+        <field name="model">office_task</field>
+        <field name="arch" type="xml">
+            <search string="Search Tasks">
+                <field name="team_id" string="Team Id"/>
+                <field name="project" string="Project"/>
+                <field name="start_dt" string="Start Date"/>
+                <field name="time" string="Time (in years)"/>
+                <field name="status" string="Status"/>
+                
+            </search>
+        </field>
+    </record>
+
      <record id="view_task_kanban" model="ir.ui.view">
         <field name="name">office.task.kanban</field>
         <field name="model">office_task</field>
@@ -40,32 +62,33 @@
                 <field name="project"/>
                 <field name="start_dt"/>
                 <field name="time"/>
-                <field name="status"/>
+                <field name="status" widget="statusbar" />
+                <field name="emp_id"  />
 
 
                 <templates>
                     <t t-name="kanban-box">
-                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
+                            <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
                             
                                 <strong> Team Name : <field name="team_id"/></strong>
-                                <br/>
                                 <hr/>
 
                                 <strong> Project : <field name="project"/></strong>
-                                <br/>
                                 <hr/>
 
                                 <strong> Start Date : <field name="start_dt"/></strong>
                                
-                                <br/>
                                 <hr/>
 
                                 <strong> Time : <field name="time"/></strong>
                                
-                                <br/>
                                 <hr/>
 
-                                <strong> Status : <field name="status"/></strong>
+                                <strong> Status : <field name="status" widget="statusbar" /></strong>
+                               
+                                <hr/>
+
+                                <strong> Employees : <field name="emp_id"  /></strong>
                                
 
                             </div>

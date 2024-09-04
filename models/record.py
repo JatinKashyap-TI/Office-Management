@@ -4,7 +4,7 @@ from datetime import date
 class Record(models.Model):
     _name="office_record"
     emp_id=fields.Many2one("office_employee",string="Employee id" ,required=True)
-    emp_cno=fields.Integer(string="Employee Contact Number",required=True,size=10);
+    emp_cno=fields.Integer(string="Employee Contact Number",required=True);
     emp_mail=fields.Char(string="Employee Email",required=True);
     emp_add=fields.Char(string="Employee Address",required=True);
     emp_aad_id=fields.Char(string="Aadhar Number",required=True);
@@ -14,6 +14,7 @@ class Record(models.Model):
     emp_dob=fields.Date(string="DOB of employee",required=True);
     age = fields.Char(string='Age (in years)', compute='_compute_time', store=True)
     doc_available = fields.Boolean(string="Verified", compute='_compute_doc_available')
+    
 
     @api.depends('emp_dob')
     def _compute_time(self):    

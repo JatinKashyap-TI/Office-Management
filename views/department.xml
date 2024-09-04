@@ -1,17 +1,41 @@
 <odoo>
     <record id="form_view_department" model="ir.ui.view">
-        <field name='name' >office_department.form</field>
+        <field name="name">office.department.form</field>
         <field name="model">office_department</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="dept_name"/>
-                        <field name="emp_id"/>
-                        <field name="dept_id"/>
-                    </group>
+                    <notebook>
+                        <page string="Department Info">
+                            <group >
+                                <field name="dept_name" class="form-control" placeholder="name@example.com"/>
+                                <field name="dept_id" class="form-control" placeholder="name@example.com"/>
+                            </group>
+                        </page>
+                        <page string="Employees" >
+                            <field name="emp_id" >
+                                <tree editable="bottom">
+                                    <field name="emp_name"/>
+                                    <field name="emp_id"/>
+                                    <field name="team_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
+        </field>
+    </record>
+<record id="view_office_department_search" model="ir.ui.view">
+        <field name="name">office.department.search</field>
+        <field name="model">office_department</field>
+        <field name="arch" type="xml">
+            <search string="Search Departments">
+                <field name="dept_name" string="Department Name"/>
+                <field name="dept_id" string="Department Id"/>
+                <field name="emp_id" string="Employee Id"/>
+                
+            </search>
         </field>
     </record>
     <record id="tree_view_department" model="ir.ui.view">
@@ -19,9 +43,9 @@
         <field name="model">office_department</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="dept_name"/>
-                <field name="emp_id"/>
-                <field name="dept_id"/>
+                <field name="dept_name" class=" badge text-bg-primary fs-6 fw-bold " />
+                <field name="emp_id"  widget="badge" class="text-center fw-bold"/>
+                <field name="dept_id" class=" badge text-bg-primary fs-6 fw-bold " />
 
             </tree>
         </field>

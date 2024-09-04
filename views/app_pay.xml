@@ -6,22 +6,38 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="emp_id"/>
-                        <field name="pay"/>
-                        <field name="app"/>
+                        <field name="emp_id" class="form-control" placeholder="name@example.com" />
+                        <field name="emp_name" class="form-control" placeholder="name@example.com" />
+                        <field name="pay" class="form-control" placeholder="name@example.com"/>
+                        <field name="app" class="form-control" placeholder="name@example.com"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+
+ <record id="view_office_pay_search" model="ir.ui.view">
+        <field name="name">office.pay.search</field>
+        <field name="model">office_pay</field>
+        <field name="arch" type="xml">
+            <search string="Search Office Pays">
+                <field name="pay" string="Salary"/>
+                <field name="app" string="Appraisal"/>
+                <field name="emp_id" string="Employee"/>
+            </search>
+        </field>
+    </record>
+
+
     <record id="tree_view_app_pay" model="ir.ui.view">
         <field name='name' >office_pay.tree</field>
         <field name="model">office_pay</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="emp_id"/>
-                <field name="pay"/>
-                <field name="app"/>
+                <field name="emp_id" class=" badge text-bg-primary fs-6 fw-bold "/>
+                <field name="pay" class="text-center fw-bold" />
+                <field name="app" class=" text-center badge text-bg-primary fs-6 fw-bold "/>
+                <field name="emp_name" class="text-center fw-bold" />
             </tree>
         </field>
     </record>
@@ -35,17 +51,20 @@
                 <field name="emp_id"/>
                 <field name="pay"/>
                 <field name="app"/>
+                <field name="emp_name"/>
                 <templates>
-                    <t t-name="kanban-box">
-                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" >
-                                <strong>  Emp Id  : <field name="emp_id"/></strong>
-                                <hr/>
-                                <strong> Sallary : <field name="pay"/></strong>
-                                <hr/>
-                                <strong> Expected Appraisal : <field name="app"/></strong>
-                            </div>
-                    </t>
-                </templates>
+                        <t t-name="kanban-box">
+                                <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" >
+                                    <strong>  Emp Id  : <field name="emp_id"/></strong>
+                                    <hr/>
+                                    <strong> Sallary : <field name="pay"/></strong>
+                                    <hr/>
+                                    <strong> Expected Appraisal : <field name="app"/></strong>
+                                    <hr/>
+                                    <strong> Employee Name : <field name="emp_name"/></strong>
+                                </div>
+                        </t>
+                    </templates>
             </kanban>
         </field>
     </record>

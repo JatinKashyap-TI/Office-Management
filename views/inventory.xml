@@ -1,16 +1,26 @@
 <odoo>
     <record id="form_view_inventory" model="ir.ui.view">
-        <field name='name' >office_inventory.form</field>
+        <field name="name">office_inventory.form</field>
         <field name="model">office_inventory</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="prod_name"/>
-                        <field name="prod_id"/>
-                        <field name="warranty_status"/>
-                        <field name="emp_id"/>
-                    </group>
+                    <notebook>
+                        <page string="Product Info">
+                            <group>
+                                <field name="prod_name" class="form-control" placeholder="Product Name"/>
+                                <field name="prod_id" class="form-control" placeholder="Product ID"/>
+                            </group>
+                        </page>
+
+                        <page string="Additional Info">
+                            <group>
+                                <field name="emp_id" class="form-control" placeholder="Employee"/>
+                                <field name="emp_name" class="form-control" placeholder="Employee"/>
+                                <field name="warranty_status" widget="radio"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -20,13 +30,31 @@
         <field name="model">office_inventory</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="prod_name"/>
-                <field name="prod_id"/>
-                <field name="warranty_status"/>
-                <field name="emp_id"/>
+                <field name="prod_name" class="text-center fw-bold" />
+                <field name="prod_id" class=" text-center badge text-bg-primary fs-6 fw-bold " />
+                <field name="warranty_status" widget="radio" class="text-center fw-bold" />
+                <field name="emp_id" class=" text-center badge text-bg-primary fs-6 fw-bold "  />
+                <field name="emp_name"  class="text-center fw-bold" />
             </tree>
         </field>
     </record>
+
+
+<record id="view_office_inventory_search" model="ir.ui.view">
+        <field name="name">office.inventory.search</field>
+        <field name="model">office_inventory</field>
+        <field name="arch" type="xml">
+            <search string="Search Inventory Records">
+                <field name="prod_name" string="Product Name"/>
+                <field name="prod_id" string="Product Id"/>
+                <field name="warranty_status" string="Warranty Status"/>
+                <field name="emp_id" string="Employee Id"/>
+                
+            </search>
+        </field>
+    </record>
+
+    
      <record id="view_inventory_kanban" model="ir.ui.view">
         <field name="name">office.inventory.kanban</field>
         <field name="model">office_inventory</field>
@@ -36,23 +64,23 @@
                 <field name="prod_id"/>
                 <field name="warranty_status"/>
                 <field name="emp_id"/>
+                <field name="emp_name"/>
                 
                 <templates>
                     <t t-name="kanban-box">
-                            <div class="o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
+                            <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record">
                                 <strong> Name : <field name="prod_name"/></strong>
-                                <br/>
                                 <hr/>
                                 <strong> Department : <field name="prod_id"/></strong>
-                                <br/>
                                 <hr/>
 
-                                <strong> Team Id : <field name="warranty_status"/></strong>
-                                <br/>
+                                <strong> Team Id : <field name="warranty_status" widget="radio"/></strong>
                                 <hr/>
 
                                 <strong> Emp Id : <field name="emp_id"/></strong>
-                                <br/>
+                                <hr/>
+
+                                <strong> Emp Name : <field name="emp_name"/></strong>
 
                             </div>
                             

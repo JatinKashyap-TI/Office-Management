@@ -4,29 +4,57 @@
         <field name="model">office_attendence</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+
+                    <button class="btn-success" name="action_do_something" type="object" string="Check In" />
+                    <button class="btn-danger" name="action_do_something_check_out" type="object" string="Check Out"/>
+                </header>
+
                 <sheet>
                     <group>
-                        <field name="check_in"/>
-                        <field name="chck_in"/>
-                        <field name="check_out"/>
-                        <field name="chck_out"/>
-                        <field name="present"/>
+                        <!-- <field name="check_in"/> -->
+                        <group>
+                        <field name="chck_in" widget='date' />
+                        <field name="chck_out"  />
+
+                        </group>
+                        <!-- <field name="check_out"/> -->
+                        <group>
+                        <field name="present" />
+                        <field name="attend"  />
+
+                        </group>
+                       
+
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-     
+    <record id="office_view_calendar" model="ir.ui.view" >
+        <field name="name" >office_attendence.calendar</field>
+        <field name="model">office_attendence</field>
+        <field name="arch" type="xml">
+            <calendar string="Attendence" date_start="chck_in" date_stop="chck_out" color="attend">
+                        <field name="chck_in" widget='date'/>
+                        <field name="chck_out"/>
+                        <field name="present"/>
+                        <field name="attend"/>
+            </calendar>
+        </field>
+    </record>
     <record id="tree_view_attendence" model="ir.ui.view">
         <field name='name' >office_attendence.tree</field>
         <field name="model">office_attendence</field>
         <field name="arch" type="xml">
-            <tree>
-                        <field name="check_in"/>
-                        <field name="chck_in"/>
-                        <field name="check_out"/>
-                        <field name="chck_out"/>
-                        <field name="present"/>
+            <tree default_order="create_date desc">
+                        <!-- <field name="check_in"/> -->
+                                                <field name="chck_in"  class=" text-center badge text-bg-primary fs-6 fw-bold " />
+
+                        <!-- <field name="check_out"/> -->
+                        <field name="chck_out" class="text-center fw-bold" />
+                        <field name="present" class=" badge text-bg-primary fs-6 fw-bold text-center " />
+                        <field name="attend" class="text-center fw-bold" />
             </tree>
         </field>
     </record>
@@ -36,7 +64,7 @@
     <record id="action_view_attendence" model="ir.actions.act_window">
         <field name="name">Attendence</field>
         <field name="res_model">office_attendence</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="tree_view_attendence" />
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">

@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_office_employee,access_office_employee,model_office_employee,,1,1,1,1
+access_office_employee,access_office_employee,model_office_employee,hr,1,1,1,1
+access_office_employee,access_office_employee,model_office_employee,base.group_user,1,1,1,1
 access_office_pay,access_office_pay,model_office_pay,,1,1,1,1
 access_office_department,access_office_department,model_office_department,,1,1,1,1
 access_office_finance,access_office_finance,model_office_finance,,1,1,1,1
