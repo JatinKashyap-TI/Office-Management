@@ -50,13 +50,15 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="emp_id"  />
+                <field name="emp_name"  />
+                <field name="dept"  />
                 <field name="emp_cno"/>
                 <field name="emp_mail"/>
                 <field name="emp_add"/>
                 <field name="emp_aad_id"/>
                 <field name="emp_bank"/>
                 <field name="doc_available" widget='boolean'/>
-                <field name="emp_photo" widget="image" />
+                <field name="emp_photo" widget="image"  />
                 <field name="emp_dob"/>
                 <field name="age"/>
         </tree>
@@ -69,6 +71,8 @@
         <field name="arch" type="xml">
             <search string="Search Records">
                 <field name="emp_id" string="Employee Id"/>
+                <field name="emp_name"  />
+                <field name="dept"  />
                 <field name="emp_mail" string="Employee Email"/>
                 <field name="emp_add" string="Employee Address"/>
                 <field name="emp_aad_id" string="Aadhar Number"/>
@@ -87,6 +91,8 @@
         <field name="arch" type="xml">
             <kanban>
                 <field name="emp_id"/>
+                <field name="emp_name"  />
+                <field name="dept"  />
                 <field name="emp_cno"/>
                 <field name="emp_mail"/>
                 <field name="emp_add"/>
@@ -98,7 +104,7 @@
                 <field name="age"/>
                 <templates>
                     <t t-name="kanban-box">
-                            <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" style="max-width: 540px;max-height: 260px;" >
+                            <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" style="max-width: 540px;max-height: 325px;" >
                               <div class="row g-0">
                                     <div class="col-md-4">
                                 <img t-att-src="kanban_image('office_record', 'emp_photo', record.id.raw_value)" class="img-fluid rounded-start" />
@@ -107,34 +113,17 @@
                                 <!-- <hr/> -->
 <div class="col-md-8">
       <div class="card-body">
-                                <h5 class="card-title" > Emp Contact Number : <field name="emp_cno"/></h5>
-                                <!-- <hr/> -->
-
-                                <div class="card-text" > Emp mail : <field name="emp_mail"/></div>
-                                <!-- <hr/> -->
-
-                                <div> Emp Add : <field name="emp_add" /></div>
-                                <!-- <hr/> -->
-
-                                <div> Emp Govt Id : <field name="emp_aad_id"/></div>
-                                <!-- <hr/> -->
-
-                                <div> Bank Account: <field name="emp_bank"/></div>
-                                
-                                <!-- <hr/> -->
-                                <div> Employee Id : <field name="emp_id"/></div>
-
-                                <!-- <hr/> -->
-
-                                <div> Verified <field name="doc_available" widget='boolean' style="width:5px" /></div>
-                                <!-- <hr/> -->
-
-                                <div> Dob: <field name="emp_dob"/></div>
-                                <!-- <hr/> -->
-
-                                <div> Age : <field name="age"/></div>
-                                
-
+                                <h6 class="card-title" > Name : <field name="emp_name"/></h6>
+                                <h6> Verified <field name="doc_available" widget='boolean' style="width:5px" /></h6>
+                                <h6> Employee Id : <field name="emp_id"/></h6>
+                                <h6> Department : <field name="dept"  /></h6>
+                                <h6> Dob: <field name="emp_dob"/></h6>
+                                <h6> Age : <field name="age"/></h6>
+                                <h6> C.no : <field name="emp_cno"/></h6>
+                                <h6 > Email : <field name="emp_mail"/></h6>
+                                <h6> Emp Add : <field name="emp_add" /></h6>
+                                <h6> Govt Id : <field name="emp_aad_id"/></h6>
+                                <h6> Bank Account: <field name="emp_bank"/></h6>
                             </div>
                             </div>
                             </div>

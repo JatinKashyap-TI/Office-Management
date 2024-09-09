@@ -22,6 +22,7 @@
                         <group>
                         <field name="present" />
                         <field name="attend"  />
+                        <field name="emp_atnd"  />
 
                         </group>
                        

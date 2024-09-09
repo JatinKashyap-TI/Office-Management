@@ -7,11 +7,13 @@
     "category":"management",
     "author":"Jatin",
     "summary":"There is nothing like summary for Legends",
+    'icon': 'Office_Management_Final/static/description/icon.png',
     "data":['security/ir.model.access.csv',
             'security/groups.xml',
             'security/access.xml',
             "views/employee.xml",
             "views/attendence.xml",
+            "views/check_in.xml",
             "views/app_pay.xml",
             "views/department.xml",
             "views/finance.xml",
@@ -19,6 +21,7 @@
             "views/record.xml",
             "views/task.xml",
             "views/team.xml",
+            "views/accounting.xml",
             "views/menus.xml",
             ]
 }

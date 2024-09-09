@@ -1,0 +1,48 @@
+<odoo>
+
+  <record id="form_view_attendence" model="ir.ui.view">
+        <field name='name' >office_attendence.form</field>
+        <field name="model">office_attendence</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <button class="btn-success" name="action_do_something" type="object" string="Check In" />
+                    <button class="btn-danger" name="action_do_something_check_out" type="object" string="Check Out"/>
+                </header>
+
+                <sheet>
+                    <group>
+                        <!-- <field name="check_in"/> -->
+                        <group>
+                        <field name="chck_in" widget='date' />
+                        <field name="chck_out"  />
+
+                        </group>
+                        <!-- <field name="check_out"/> -->
+                        <group>
+                        <field name="present" />
+                        <field name="attend"  />
+                        <field name="emp_atnd"  />
+
+                        </group>
+                       
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+<record id="action_view_checkin" model="ir.actions.act_window">
+        <field name="name">Check In/Check Out</field>
+        <field name="res_model">office_attendence</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="form_view_attendence" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first employee
+            </p>
+        </field>
+    </record>
+</odoo>

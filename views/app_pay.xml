@@ -35,9 +35,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="emp_id" class=" badge text-bg-primary fs-6 fw-bold "/>
-                <field name="pay" class="text-center fw-bold" />
+                <field name="emp_name" class="text-center fw-bold" /> 
                 <field name="app" class=" text-center badge text-bg-primary fs-6 fw-bold "/>
-                <field name="emp_name" class="text-center fw-bold" />
+                <field name="pay" class="text-center fw-bold" /> 
             </tree>
         </field>
     </record>
@@ -55,13 +55,15 @@
                 <templates>
                         <t t-name="kanban-box">
                                 <div class=" card text-bg-secondary mb-3 o_kanban_details oe_kanban_global_click o_kanban_record" t-att-record="record" >
-                                    <strong>  Emp Id  : <field name="emp_id"/></strong>
+                                    <strong> Employee Name : <field name="emp_name"/></strong>
+
                                     <hr/>
                                     <strong> Sallary : <field name="pay"/></strong>
                                     <hr/>
                                     <strong> Expected Appraisal : <field name="app"/></strong>
                                     <hr/>
-                                    <strong> Employee Name : <field name="emp_name"/></strong>
+                                    <strong>  Emp Id  : <field name="emp_id"/></strong>
+    
                                 </div>
                         </t>
                     </templates>

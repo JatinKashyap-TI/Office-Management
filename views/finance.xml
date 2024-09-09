@@ -35,9 +35,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="team_id" class="text-center badge text-bg-primary fs-6 fw-bold " />
-                <field name="project" class="text-center fw-bold" />
-                <field name="budget" class=" text-center badge text-bg-primary fs-6 fw-bold " />
                 <field name="team_name" class="text-center fw-bold" />
+                <field name="budget" class=" text-center badge text-bg-primary fs-6 fw-bold " />
+                <field name="project" class="text-center fw-bold" />
             </tree>
         </field>
     </record>

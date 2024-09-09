@@ -5,9 +5,12 @@
         <field name="arch" type="xml">
             <form class="p-3 mb-2 bg-body text-body">
                 <sheet>
-
+                
+<notebook>
+                        <page string="Employee Info">
                     <group >
                     <group>
+                    
                         <field name="emp_name" class="form-control" placeholder="name@example.com"/>
 
                         <field name="emp_id" class="form-control" placeholder="name@example.com"/>
@@ -20,6 +23,12 @@
                         <field name="team_name" class="form-control" placeholder="name@example.com"/>
                     </group>
                     </group>
+</page>
+<page string="Attendence ">
+                        <field name="atnd" class="form-control" placeholder="name@example.com"/>
+
+</page>
+</notebook>
                 </sheet>
             </form>
         </field>
@@ -36,6 +45,7 @@
                 <field name="dept_name" class="text-center fw-bold "  />
                 <field name="team_id" class="badge text-bg-primary fs-6 fw-bold " />
                 <field name="team_name" class="text-center fw-bold "  />
+                <field name="atnd" widget="badge"  class="badge  text-bg-primary fs-6 fw-bold " />
             </tree>
         </field>
     </record>
@@ -57,19 +67,22 @@
                             <div class="o_kanban_details oe_kanban_global_click o_kanban_record card text-bg-secondary mb-3" t-att-record="record">
                                 <strong> Name : <field name="emp_name"  /></strong>
                                 <hr/>
-                                <strong> Department : <field name="dept_id"/></strong>
+                                <strong> Id : <field name="emp_id"/></strong>
                                 <hr/>
 
                                 <strong> Team Id : <field name="team_id"/></strong>
                                 <hr/>
 
-                                <strong> Emp Id : <field name="emp_id"/></strong>
+                                <strong> Department : <field name="dept_id"/></strong>
                                 <hr/>
 
                                 <strong> Dept Name : <field name="dept_name"/></strong>
                                 <hr/>
 
                                 <strong> Team Name : <field name="team_name"/></strong>
+                                <hr/>
+
+                                <strong> Attendence : <field name="atnd"/></strong>
 
                             </div>
                             

@@ -1,0 +1,58 @@
+<odoo>
+<record id="office_accounting_form" model="ir.ui.view">
+<field name="name">office_accounting_form</field>
+<field name="model">office_accounting</field>
+<field name="arch" type="xml">
+
+<form>
+<sheet>
+<header>
+
+                    <button class="btn-success" name="action_pay_salary" type="object" string="Pay" />
+                </header>
+
+<group>
+<field name="payment"/>
+<field name="internal"/>
+<field name="emp_id"/>
+<field name="time"/>
+
+</group>
+
+</sheet>
+
+</form>
+
+</field>
+</record>
+
+
+<record id="office_accounting_tree" model="ir.ui.view">
+
+<field name="name">office_accounting_tree</field>
+<field name="model">office_accounting</field>
+<field name="arch" type="xml">
+
+<tree>
+
+<field name="internal"/>
+<field name="emp_id"/>
+<field name="time"/>
+
+
+
+</tree>
+
+</field>
+
+</record>
+
+<record id='office_accounting_action' model="ir.actions.act_window">
+
+<field name="name">Accounting</field>
+<field name="res_model">office_accounting</field>
+<field name="view_mode">tree,form</field>
+<field name="view_id" ref="office_accounting_tree"/>
+
+</record>
+</odoo>

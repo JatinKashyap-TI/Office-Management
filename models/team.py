@@ -6,4 +6,3 @@ class Team(models.Model):
     team_id=fields.Char(string="Team Id",required=True);
     team_role=fields.Selection([('odoo',"ODOO Dev Team"),('php','PHP Dev Team'),('system','System Admin team'),('management','Management Team')],string="Team Role",required=True)
     emp_id=fields.One2many("office_employee","team_id",string="Emp Id",required=True);
-    

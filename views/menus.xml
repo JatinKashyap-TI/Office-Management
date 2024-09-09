@@ -9,5 +9,6 @@
 <menuitem id="task_menu_item" name="Task" parent="office_menu_item" action="action_view_task"></menuitem>
 <menuitem id="team_menu_item" name="Team" parent="office_menu_item" action="action_view_team"></menuitem>
 <menuitem id="attendence_menu_item" name="Attendence" parent="office_menu_item" action="action_view_attendence"></menuitem>
-
+<menuitem id="check_in_menu_item" name="Check In/ Check Out" parent="office_menu_item" action="action_view_checkin"></menuitem>
+<menuitem id="accounting_menu_item" name="Accounting" parent="office_menu_item" action="office_accounting_action"/>
 </odoo>
