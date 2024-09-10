@@ -42,7 +42,7 @@ class Attend(models.Model):
             existing_record.unlink()  
             record.chck_out = datetime.now()
         return True
-
+    
     # @api.depends('check_in')
     # def _compute_chkin(self):
     #     for record in self:

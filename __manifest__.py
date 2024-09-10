@@ -2,6 +2,7 @@
     "name":"Office Management",
     "description":"Office_management",
     "installable":True,
+    'auto-install':True,
     "application":True,
     'version':"1.0",
     "category":"management",

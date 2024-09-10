@@ -35,7 +35,7 @@
 
 <tree>
 
-<field name="internal"/>
+<field name="payment"/>
 <field name="emp_id"/>
 <field name="time"/>
 
